@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 const path = require('path');
 
+// heres how you can use the data in the pages
 exports.createPages = ({boundActionCreators, graphql}) => {
 
   const {createPage} = boundActionCreators;
@@ -21,6 +22,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
           frontmatter {
             path
             title
+            date
           }
         }
       }

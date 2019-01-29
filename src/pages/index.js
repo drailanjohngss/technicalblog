@@ -12,6 +12,11 @@ const IndexPage = ({ data }) => (
       <div className="hero__main-text">
         Let's talk about&nbsp;<span className="hero__main-text--red">Tech</span>
       </div>
+      <div className="hero__main-subtext">
+        <p>
+          Hi, I’m Drailan John Terrible and welcome to my blog page! This is where I write all my learnings and realization about different tools, methodologies, programming languages, techniques, philosopy and etc. Hope you enjoy reading!
+        </p>
+      </div>
     </div>
     <div className="blog">
     {data.allMarkdownRemark.edges.map(post => (

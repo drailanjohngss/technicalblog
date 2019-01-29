@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,900,900i');
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -639,6 +639,8 @@ pre tt:after {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   &__main-text {
     align-items: center;
     display: flex;
@@ -652,6 +654,17 @@ pre tt:after {
       color: #FF2626;
     }
   }
+  &__main-subtext {
+    margin: 0 auto;
+    width: 700px;
+    display: flex;
+    padding-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 19px;
+    text-align: center;
+  }
 }
 
 .blog {
@@ -659,6 +672,7 @@ pre tt:after {
   align-items: center;
   width: 100%;
   justify-content: center;
+  padding-top: 40px;
   &__item {
     width: 300px;
     height: 200px;

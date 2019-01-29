@@ -8,23 +8,28 @@ import SEO from '../components/seo'
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something greatttt.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="hero">
+      <div className="hero__main-text">
+        Let's talk about&nbsp;<span className="hero__main-text--red">Tech</span>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-    <h2>Index</h2>
+    <div className="blog">
     {data.allMarkdownRemark.edges.map(post => (
-      <li>
-        <Link
-          key={post.node.id}
-          to={post.node.frontmatter.path}>
-          {post.node.frontmatter.title}
-        </Link>
-      </li>
+      <Link
+        key={post.node.id}
+        to={post.node.frontmatter.path}>
+        <div className="blog__item">
+          <div className="blog__item-img">
+          Image here
+          </div>
+          <div className="blog__item-title">
+            <h3>{post.node.frontmatter.title}</h3>
+          </div>
+
+        </div>
+      </Link>
     ))}
+    </div>
   </Layout>
 )
 

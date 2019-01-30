@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
@@ -18,22 +18,25 @@ const IndexPage = ({ data }) => (
         </p>
       </div>
     </div>
-    <div className="blog">
-    {data.allMarkdownRemark.edges.map(post => (
-      <Link
-        key={post.node.id}
-        to={post.node.frontmatter.path}>
-        <div className="blog__item">
-          <div className="blog__item-img">
-          Image here
-          </div>
-          <div className="blog__item-title">
-            <h3>{post.node.frontmatter.title}</h3>
-          </div>
+    <div className="blog-container">
+      <div className="blog">
+      {data.allMarkdownRemark.edges.map(post => (
+        <Link
+          key={post.node.id}
+          to={post.node.frontmatter.path}>
+          <div className="blog__item">
+            <div className="blog__item-img">
+            Image here {post.node.frontmatter.date}
+              <Img sizes={post.node.frontmatter.img.childImageSharp.sizes} />
+            </div>
+            <div className="blog__item-title">
+              <h3>{post.node.frontmatter.title}</h3>
+            </div>
 
-        </div>
-      </Link>
-    ))}
+          </div>
+        </Link>
+      ))}
+      </div>
     </div>
   </Layout>
 )
@@ -52,6 +55,13 @@ export const pageQuery = graphql`
            path
            title
            date
+           img {
+               childImageSharp{
+                   sizes(maxWidth: 630) {
+                       ...GatsbyImageSharpSizes
+                   }
+               }
+           }
          }
        }
      }

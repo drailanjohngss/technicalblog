@@ -666,13 +666,16 @@ pre tt:after {
     text-align: center;
   }
 }
-
+.blog-container {
+  margin: 0 auto;
+  max-width: 960px;
+}
 .blog {
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: center;
   padding-top: 40px;
+  flex-wrap: wrap;
   &__item {
     width: 300px;
     height: 200px;

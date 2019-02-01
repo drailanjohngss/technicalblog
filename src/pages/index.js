@@ -26,13 +26,15 @@ const IndexPage = ({ data }) => (
           to={post.node.frontmatter.path}>
           <div className="blog__item">
             <div className="blog__item-img">
-            Image here {post.node.frontmatter.date}
-              <Img sizes={post.node.frontmatter.img.childImageSharp.sizes} />
+              <Img className="blog-img" sizes={post.node.frontmatter.img.childImageSharp.sizes} />
+            </div>
+            <div className="blog__item-date">
+              <span><i>{post.node.frontmatter.date}</i></span>
+              <span>Drailan John D. Terrible</span>
             </div>
             <div className="blog__item-title">
-              <h3>{post.node.frontmatter.title}</h3>
+              <h4>{post.node.frontmatter.title}</h4>
             </div>
-
           </div>
         </Link>
       ))}
@@ -45,7 +47,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
    limit: 10
-   sort: { fields: [frontmatter___date], order: ASC }
+   sort: { fields: [frontmatter___date], order: DESC }
    filter: {frontmatter: { published: { eq:true } } }
  ) {
      edges {

@@ -678,18 +678,40 @@ pre tt:after {
   flex-wrap: wrap;
   &__item {
     width: 300px;
-    height: 200px;
+    height: 300px;
     background-color: red;
     margin: 10px;
   }
   &__item-img{
     background: black;
     width: 300px;
-    height: 100px;
   }
   &__item-title {
-    padding: 10px;
+    padding: 0 10px 10px 10px;
   }
+  &__item-date{
+    font-size: 11px;
+    padding: 0 10px 0 10px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blog-img {
+  height: 200px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  background-color: rgba(192, -3, -1, 1);
+  color: #fff;
+  padding: 10px;
+  margin-top: 50px;
 }
 
 

@@ -25,10 +25,10 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <footer className="footer">
+            <div className="footer__first">Made with React | Gatsby.js | GraphQL </div>
+            <div className="footer__second">Drailan John D. Terrible | Web and Mobile Developer | drailanjohn.gss@gmail.com</div>
+            <div className="footer__third"><a href="https://drailanjohngss.github.io/"><u>Go back to main site</u></a></div>
           </footer>
         </div>
       </>

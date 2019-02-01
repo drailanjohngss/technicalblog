@@ -1,9 +1,9 @@
 ---
 path: '/first-blog'
-title: 'First Blog Post'
+title: 'Why every programmer/developer should know how to use Git?'
 published: true
 date: '2019-01-11'
-img: '../../../images/hero-banner.png'
+img: '../../../images/git-article-banner.jpg'
 ---
 
 ### My first Blog!

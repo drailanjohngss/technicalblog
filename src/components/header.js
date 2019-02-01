@@ -34,13 +34,13 @@ const Header = ({ siteTitle }) => (
 
       <div className="navlinks">
         <div className="navlinks__item">
-          <a href='https://drailanjohngss.github.io/#about' target="_blank"> ABOUT </a>
+          <a href='https://drailanjohngss.github.io/#about' target="_blank" rel="noopener noreferrer"> ABOUT </a>
         </div>
         <div className="navlinks__item">
-          <a href="https://drailanjohngss.github.io/#projects" target="_blank"> PROJECTS </a>
+          <a href="https://drailanjohngss.github.io/#projects" target="_blank" rel="noopener noreferrer"> PROJECTS </a>
         </div>
         <div className="navlinks__item">
-          <a href="https://drailanjohngss.github.io/#contact" target="_blank"> CONTACT </a>
+          <a href="https://drailanjohngss.github.io/#contact" target="_blank" rel="noopener noreferrer"> CONTACT </a>
         </div>
       </div>
     </div>

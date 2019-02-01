@@ -5,16 +5,9 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/pages/data`,
-        name: 'data',
-      }
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,6 +29,13 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages/data`,
+        name: 'data',
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -45,7 +45,6 @@ module.exports = {
               maxWidth: 590,
             },
           },
-          'gatsby-remark-copy-linked-files',
         ],
       },
     },

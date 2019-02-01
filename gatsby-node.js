@@ -8,9 +8,8 @@
 const path = require('path');
 
 // heres how you can use the data in the pages
-exports.createPages = ({boundActionCreators, graphql}) => {
-
-  const {createPage} = boundActionCreators;
+exports.createPages = ({actions, graphql}) => {
+  const { createPage } = actions;
   const postTemplate = path.resolve('src/templates/post.js');
 
   return graphql(`{
@@ -26,7 +25,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             img {
                 childImageSharp{
                     sizes(maxWidth: 630) {
-                        ...GatsbyImageSharpSizes
+                        src
                     }
                 }
             }
@@ -36,10 +35,11 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     }
   }`).then(res => {
     if(res.errors) {
+      console.log(res.errors)
       return Promise.reject(res.errors);
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({node}) => {
+    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: postTemplate

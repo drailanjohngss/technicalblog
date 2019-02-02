@@ -630,12 +630,16 @@ pre tt:after {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
   }
+
+  @media screen and (max-width: 768px) {
+     display: block;
+     text-align: center;
+   }
 }
 
 .hero {
   background-image: url('../images/hero-banner.png');
   width: 100%;
-  height: 418px;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -643,27 +647,40 @@ pre tt:after {
   justify-content: center;
   &__main-text {
     align-items: center;
-    display: flex;
+    display: block;
     justify-content: center;
-    width: 100%;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 96px;
+    padding: 100px 50px 0 50px;
     color: #fff;
+    text-align: center;
+    line-height: 80px;
     &--red {
       color: #FF2626;
+
     }
+    @media screen and (max-width: 768px) {
+       display: block;
+       text-align: center;
+     }
   }
   &__main-subtext {
     margin: 0 auto;
     width: 700px;
     display: flex;
-    padding-top: 100px;
+    padding: 60px;
     font-family: 'Roboto', sans-serif;
     color: #fff;
     font-weight: lighter;
     font-size: 19px;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+       display: block;
+       width: 100%;
+       padding: 5vw;
+     }
   }
 }
 .blog-container {
@@ -676,6 +693,7 @@ pre tt:after {
   width: 100%;
   padding-top: 40px;
   flex-wrap: wrap;
+  justify-content: center;
   &__item {
     width: 300px;
     height: 300px;
@@ -712,6 +730,9 @@ pre tt:after {
   color: #fff;
   padding: 10px;
   margin-top: 50px;
+  &__second {
+      text-align: center;
+  }
 }
 
 

@@ -10,7 +10,12 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="hero">
       <div className="hero__main-text">
-        Let's talk about&nbsp;<span className="hero__main-text--red">Tech</span>
+        <p>
+            Let's talk about
+        </p>
+        <p className="hero__main-text--red">
+            Tech
+        </p>
       </div>
       <div className="hero__main-subtext">
         <p>

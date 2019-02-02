@@ -19,11 +19,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-          }}
-        >
+        <div>
           {children}
           <footer className="footer">
             <div className="footer__first">Made with React | Gatsby.js | GraphQL </div>

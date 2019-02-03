@@ -9,9 +9,25 @@ export default function Template({data}) {
 
   return (
     <Layout>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div className="post">
+        <div
+            className="post__title-container"
+            style= {{
+                backgroundImage: `url(${post.frontmatter.img.childImageSharp.sizes.src})`,
+                backgroundSize: `cover`,
+                backgroundRepeat: `no-repeat`,
+                display: `flex`,
+                alignItems: `center`,
+                justifyContent: `center`,
+                backgroundPosition: `center`,
+                position: `relative`,
+                zIndex: 1,
+                width: `100%`,
+            }}
+        >
+            <h1 className="post__title">{post.frontmatter.title}</h1>
+        </div>
+        <div className="post__body" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   )
@@ -25,6 +41,13 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
+        img {
+            childImageSharp{
+                sizes(maxWidth: 2400) {
+                    src
+                }
+            }
+        }
       }
     }
   }

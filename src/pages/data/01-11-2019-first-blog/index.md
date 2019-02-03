@@ -6,6 +6,11 @@ date: '2019-01-11'
 img: '../../../images/git-article-banner.jpg'
 ---
 
-### My first Blog!
+### Git is a source control tool.
 
-This is my first gatsby blog <3
+Because git is love!
+
+```
+What is Git?
+
+```

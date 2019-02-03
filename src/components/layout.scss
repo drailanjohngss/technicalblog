@@ -740,6 +740,12 @@ pre tt:after {
 .post {
     margin: 0 auto;
     width: 100%;
+    &__title-container {
+        padding: 150px;
+        @media screen and (max-width: 768px) {
+           padding: 5vw;
+         }
+    }
     &__title {
         color: #fff;
         font-family: 'Roboto', sans-serif;
@@ -747,10 +753,19 @@ pre tt:after {
         font-size: 96px;
         line-height: 90px;
         width: 100%;
+        @media screen and (max-width: 768px) {
+           padding: 1vw;
+           font-size: 15vw;
+           line-height: 18vw;
+         }
     }
     &__body {
         color: #fff;
         padding: 20px 80px 20px;
+        @media screen and (max-width: 768px) {
+           padding: 1vw;
+           padding: 15vw 10vw 5vw;
+         }
     }
 }
 

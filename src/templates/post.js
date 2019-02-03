@@ -22,7 +22,6 @@ export default function Template({data}) {
                 backgroundPosition: `center`,
                 position: `relative`,
                 zIndex: 1,
-                padding: `150px`,
                 width: `100%`,
             }}
         >

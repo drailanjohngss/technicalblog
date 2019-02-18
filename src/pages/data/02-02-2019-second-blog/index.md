@@ -1,6 +1,6 @@
 ---
 path: '/git-basics'
-title: 'Git Basics'
+title: 'Git Basic Principles and Concepts'
 published: true
 date: '2019-02-02'
 img: '../../../images/dont-give-up.jpg'

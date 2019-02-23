@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => (
             Let's talk about
         </p>
         <p className="hero__main-text--red">
-            Tech
+            Me
         </p>
       </div>
       <div className="hero__main-subtext">

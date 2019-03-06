@@ -1,12 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Disqus from 'disqus-react';
 
 export default function Template({data}) {
   const {markdownRemark: post} = data;
-  // const post = data.markdownRemark;
-
+  const disqusConfig = {
+    title: post.frontmatter.title,
+  }
   return (
     <Layout>
       <div className="post">
@@ -28,6 +30,9 @@ export default function Template({data}) {
             <h1 className="post__title">{post.frontmatter.title}</h1>
         </div>
         <div className="post__body" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="post__body">
+          <Disqus.DiscussionEmbed shortname="djtechblog" config={disqusConfig} />
+        </div>
       </div>
     </Layout>
   )

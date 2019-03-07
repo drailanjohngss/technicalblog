@@ -8,6 +8,7 @@ export default function Template({data}) {
   const {markdownRemark: post} = data;
   const disqusConfig = {
     title: post.frontmatter.title,
+    url: `https://djtechblog.netlify.com/${post.frontmatter.path}/`
   }
   return (
     <Layout>

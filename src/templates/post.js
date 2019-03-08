@@ -1,8 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Disqus from 'disqus-react';
+import profileImg from '../images/profile50.png';
 
 export default function Template({data}) {
   const {markdownRemark: post} = data;
@@ -30,10 +30,20 @@ export default function Template({data}) {
         >
             <h1 className="post__title">{post.frontmatter.title}</h1>
         </div>
+        <div className="post__body">
+          <div className="author">
+            <img src={profileImg} alt=""/>
+            <span className="icon">Written by: Drailan John D. Terrible</span>
+            <span className="icon"><a href="https://www.linkedin.com/in/drailan-john-terrible-9582b6143/"><i class="fab fa-linkedin fa-lg"></i></a></span>
+            <span className="icon"><a href="https://github.com/drailanjohngss"><i class="fab fa-github fa-lg"></i></a></span>
+            <span className="icon"><a href="https://www.instagram.com/drailanpogi/"><i class="fab fa-instagram fa-lg"></i></a></span>
+          </div>
+        </div>
         <div className="post__body" dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className="post__body">
           <Disqus.DiscussionEmbed shortname="djtechblog" config={disqusConfig} />
         </div>
+        <hr />
       </div>
     </Layout>
   )

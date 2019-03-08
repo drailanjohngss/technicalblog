@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <img src={navLogo} />
+          <img alt="" src={navLogo} />
         </Link>
       </h1>
 

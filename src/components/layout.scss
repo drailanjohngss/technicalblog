@@ -762,6 +762,7 @@ pre tt:after {
         font-size: 96px;
         line-height: 90px;
         width: 100%;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.58);
         @media screen and (max-width: 768px) {
            padding: 1vw;
            font-size: 15vw;

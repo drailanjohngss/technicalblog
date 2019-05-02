@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Moment from 'react-moment'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -33,7 +34,11 @@ const IndexPage = ({ data }) => (
               <Img className="blog-img" sizes={post.node.frontmatter.img.childImageSharp.sizes} />
             </div>
             <div className="blog__item-date">
-              <span><i>{post.node.frontmatter.date}</i></span>
+              <span><i>
+                  <Moment format="MMMM D YYYY">
+                    {post.node.frontmatter.date}
+                  </Moment>
+              </i></span>
               <span>Drailan John D. Terrible</span>
             </div>
             <div className="blog__item-title">
